@@ -30,7 +30,7 @@ where gender = 'm';
 -- 현재 근무하고 있는 직원 수는 몇 명입니까? (salaries 테이블을 사용합니다.) 
 select count(*) 
 from salaries
-where emp_no is not null;
+where emp_no 
 
 
 
@@ -64,13 +64,11 @@ from titles
 order by length(title) desc; 
 
 -- 문제10
--- 현재 Enginner 직책의 사원은 총 몇 명입니까?
-select count(title) ,title,emp_no
+-- 현재 Enginer 직책의 사원은 총 몇 명입니까?
+select count(*)
 from titles
-where title = "Enginner";
+where title = "Engineer";
 
-select emp_no , title
-from titles;
 
 -- 문제11
 -- 사번이 13250(Zeydy)인 직원이 직책 변경 상황을 시간순으로 출력해보세요.
