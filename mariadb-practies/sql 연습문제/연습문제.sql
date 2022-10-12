@@ -30,7 +30,7 @@ where gender = 'm';
 -- 현재 근무하고 있는 직원 수는 몇 명입니까? (salaries 테이블을 사용합니다.) 
 select count(*) 
 from salaries
-where emp_no 
+where emp_no ;
 
 
 
