@@ -36,5 +36,5 @@ from salaries;
 
 -- 문제6 max(birth_date) as '어린사원 ', min(birth_date) as '최연장 사원'.
 -- 최고 어린 사원의 나이와 최 연장자의 나이는? 
-select  *
-f
+select max(birth_date) as '어린사원 ', min(birth_date) as '최연장 사원'
+from employees;
