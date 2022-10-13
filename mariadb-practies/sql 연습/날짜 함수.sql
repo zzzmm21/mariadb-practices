@@ -46,3 +46,4 @@ select cast(cast(1-2 as unsigned) as int);
 -- 실수 : float , double
 -- 시간 : date , datetime
 -- LOB: CLOB, BLOB(binary Large OBject)
+
