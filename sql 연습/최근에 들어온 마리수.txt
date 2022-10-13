@@ -1,0 +1,6 @@
+SELECT 
+COUNT(case when DATETIME between '2013-10-14 15:38:00' and '2013-11-18 17:03:00' then 1 end) 
+as count
+FROM ANIMAL_INS
+
+최근에 4마리가 들어왔을때 마리수를 출력하라

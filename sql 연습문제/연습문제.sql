@@ -30,7 +30,7 @@ where gender = 'm';
 -- 현재 근무하고 있는 직원 수는 몇 명입니까? (salaries 테이블을 사용합니다.) 
 select count(*) 
 from salaries
-where emp_no is not null;
+where emp_no ;
 
 
 
@@ -48,9 +48,8 @@ from dept_manager;
 -- 문제7.
 -- 전체 부서를 출력하려고 합니다. 순서는 부서이름이 긴 순서대로 출력해 보세요.
 select dept_name as '전체 부서'
-from departments ;
-where dept_name(index,"")
-
+from departments 
+order by length(dept_name) ;
 
 -- 문제8.
 -- 현재 급여가 120,000이상 받는 사원은 몇 명이나 있습니까?
@@ -61,17 +60,18 @@ where salary like "120000%";
 -- 문제9.
 -- 어떤 직책들이 있나요? 중복 없이 이름이 긴 순서대로 출력해 보세요.
 select distinct(title)
-from titles;
+from titles
+order by length(title) desc; 
 
 -- 문제10
--- 현재 Enginner 직책의 사원은 총 몇 명입니까?
+-- 현재 Enginer 직책의 사원은 총 몇 명입니까?
 select count(*)
 from titles
-where title like "Enginner";
+where title = "Engineer";
 
 
 -- 문제11
--- 사번이 13250(Zeydy)인 지원이 직책 변경 상황을 시간순으로 출력해보세요.
+-- 사번이 13250(Zeydy)인 직원이 직책 변경 상황을 시간순으로 출력해보세요.
 select from_date, to_date
 from titles
 where emp_no = "13250";
